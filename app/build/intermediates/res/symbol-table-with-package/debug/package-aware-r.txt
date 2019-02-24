@@ -789,6 +789,7 @@ id textSpacerNoTitle
 id textView
 id textView2
 id textView3
+id textView4
 id time
 id title
 id titleDividerNoCustom
@@ -835,6 +836,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout activity_splash
 layout login
 layout notification_action
 layout notification_action_tombstone

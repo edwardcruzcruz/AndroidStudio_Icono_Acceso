@@ -14,7 +14,6 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
-
     }
     /** Called when the user taps the Send button */
     public void autenticacion(View view) {
@@ -22,7 +21,9 @@ public class LoginActivity extends AppCompatActivity {
         EditText User = (EditText) findViewById(R.id.editTextUser);
         EditText Password = (EditText) findViewById(R.id.editTextPassword);
         if(User.getText().toString().equals("etcruz") && Password.getText().toString().equals("etcruz")){
-
+            Sesiones.getSessionConfig(getApplicationContext()).iniciarConfig(Password.getText().toString());
+            String valor=Sesiones.getSessionConfig(getApplicationContext()).getValue(Sesiones.TOKEN);
+            System.out.println("Su ingreso es: "+ valor+"\n");
             //correcct password
             //Toast.makeText(getApplicationContext(),
             //"Redirecting...",Toast.LENGTH_SHORT).show();

@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
     }
     /** Called when the user taps the Send button */
     public void sendMessage(View view) {
@@ -23,7 +24,13 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void salir(View view){
+        //prueba para cuando regresemos 2 veces atras y se vuelva a la "session" pero igual bota null :'D
+        //String valor=Sesiones.getSessionConfig(getApplicationContext()).getValue(Sesiones.TOKEN);
+        //System.out.println("Su ingreso es: "+ valor+"\n");
+        Sesiones.getSessionConfig(getApplicationContext()).logoutUser();
+
         Intent intent = new Intent(this , LoginActivity.class);
         startActivity(intent);
+
     }
 }
